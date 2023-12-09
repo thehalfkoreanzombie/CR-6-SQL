@@ -22,3 +22,11 @@ SELECT id FROM inventories WHERE version > 1;
 --This is your subquery. Then select everything from the inventory_parts table where the inventory_id matches an id in that subquery. 
 --Limit the output to 10 rows.
 SELECT * FROM inventory_parts WHERE inventory_id IN (SELECT id FROM inventories WHERE version > 1) LIMIT 10;
+
+--Aliasing the sets table as 's' 
+--select the year and name of the values in that table that include the substring 'Batman'. 
+--Concatenate three exclamation marks to the end of each name, and make all the names upper case.
+SELECT s.year, CONCAT(UPPER(s.name), '!!!') AS upper_name FROM sets AS s WHERE name LIKE '%Batman%';
+
+--For every quantity value greater than 1 in the inventory_parts table, double the value of the quantity. Limit your output to 20 rows, and order it by quantity.
+SELECT quantity * 2 AS double_quantity FROM inventory_parts WHERE quantity > 1 ORDER BY quantity LIMIT 20;
