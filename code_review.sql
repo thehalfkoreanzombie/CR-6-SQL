@@ -30,3 +30,12 @@ SELECT s.year, CONCAT(UPPER(s.name), '!!!') AS upper_name FROM sets AS s WHERE n
 
 --For every quantity value greater than 1 in the inventory_parts table, double the value of the quantity. Limit your output to 20 rows, and order it by quantity.
 SELECT quantity * 2 AS double_quantity FROM inventory_parts WHERE quantity > 1 ORDER BY quantity LIMIT 20;
+
+--Show the sum of all the parts for all the sets that came out since the year 2000.
+SELECT SUM(num_parts) AS sum_num_parts FROM sets WHERE year >= 2000;
+
+--Show the average number of parts for sets that came out since the year 2000.
+SELECT AVG(num_parts) AS avg_num_parts FROM sets WHERE year >= 2000;
+
+--Using GROUP BY, show the average number of parts for each theme_id in sets.
+SELECT theme_id, AVG(num_parts) AS avg_num_parts FROM sets GROUP BY theme_id;
