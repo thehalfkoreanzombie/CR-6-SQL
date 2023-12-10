@@ -17,7 +17,7 @@ In order to set this up, you will need to make a directory for your file and the
 
 -Install Docker Desktop which provides a UI (find your OS on https://docs.docker.com/get-docker/). This project's repository contains a start_db.sh, stop_db.sh and connect_db.sh files. initiate the database using the start_db.sh command in your terminal, which will start a local server on your computer. This will add the lego database. You can then use connect_db.sh to connect your terminal to MariaDB. Use stop_db.sh to stop the server.
 - If using beekeeper, connect to a local server and copy the code from lego.sql into a query. Run the whole query, which should add the lego database to your local server. Add a new query, and copy code_review.sql into the query. This will allow you to run all lines from the project.
-- If using VS Code, download the MySQL extension in the 'extensions' tab on the left hand side. After doing so, run the shell files to initiate the server.
+- If using VS Code, download the MySQL extension in the 'extensions' tab on the left hand side. After doing so, run the shell files to initiate the server or specify the server using the command line in VS Code.
 
 ## Known Bugs
 No known bugs
